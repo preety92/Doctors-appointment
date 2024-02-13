@@ -48,27 +48,52 @@ I will work to search for and integrate external data sources that enhance the f
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
-
+ Home || Appointments || Apply Doctor || Profile || Login/Logout
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
-
+Login-logout:  https://www.figma.com/file/2MqbgaUY4nnxtx1yqPH6Gm/Untitled?type=design&node-id=0-1&mode=design&t=FHRFjkfq4lRz3No0-0
+Home : https://www.figma.com/file/2MqbgaUY4nnxtx1yqPH6Gm/Untitled?type=design&node-id=2-72&mode=design&t=FHRFjkfq4lRz3No0-0
+Book Appointment: https://www.figma.com/file/2MqbgaUY4nnxtx1yqPH6Gm/Untitled?type=design&node-id=2-107&mode=design&t=FHRFjkfq4lRz3No0-0
+Appointment List: https://www.figma.com/file/2MqbgaUY4nnxtx1yqPH6Gm/Untitled?type=design&node-id=2-1704&mode=design&t=FHRFjkfq4lRz3No0-0
+Notifications: https://www.figma.com/file/2MqbgaUY4nnxtx1yqPH6Gm/Untitled?type=design&node-id=3-1749&mode=design&t=FHRFjkfq4lRz3No0-0
 ### Data
 
 Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
 
+User: Represents both patients and doctors who interact with the system.Both doctor and patient can login by Username, email.
+Doctor: Specialties, office hours, contact information will be shown.
+Appointment: Date, time, status (pending/rejected/approved), doctor ID, patient ID will be reflected.
 ### Endpoints
 
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
-
+http://localhost:3000/login
+http://localhost:3000/register
+http://localhost:3000/apply-doctor
+http://localhost:3000/notification
+http://localhost:3000/admin/users
+http://localhost:3000/admin/doctors
+http://localhost:3000/doctor/id
+http://localhost:3000/doctor/profile/id
+http://localhost:3000/doctor/book-appointment/id
+http://localhost:3000/appointments
 ### Auth
 
 Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
-
+Yes, the project includes login and user profile functionality. Authentication and authorization will be implemented using JSON Web Tokens (JWT) for secure access to the system's resources.
 ## Roadmap
 
 Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
-
+Day 1-2 : EnvironmentSetup,Node MVC Server,Create ReactApp ,Routing || login and register form,
+Day3-4: Database Connection and user model routes controller setup,UserRegisteration
+Dat 4-5: Login user with JWT Token ,Authorization with JWT,users and doctors list
+Day 5-6: Redux Tooolkit setup,Private public Routes,Admin Control pages
+Day 6-7: Layout setup,getting user details,doctor Model form,Book Appointments,check availabiltiy
+Day 7-8 :Api and Testing with form,Admin notifications,delete notifications
+Day 9-10: Get and update doctor pofile,get doctors list,booking page
 ## Nice-to-haves
 
 Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+
+Integrating google calanders that Allow users to sync their appointments with their Google Calendar or other calendar services for better schedule management.
+Create a feedback and review system where patients can provide ratings and reviews for doctors, helping other users make informed decisions.
